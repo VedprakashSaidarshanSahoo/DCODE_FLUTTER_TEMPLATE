@@ -72,7 +72,7 @@ class StartScreen extends StatelessWidget {
                     onPressed: () {
                       AppRouter.navigateWithLoadingScreen(
                         context: context,
-                        duration: const Duration(seconds: 5),
+                        duration: const Duration(seconds: 2),
                         targetRoute: AppRoutes.counter,
                       );
                     },

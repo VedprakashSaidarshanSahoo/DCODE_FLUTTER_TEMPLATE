@@ -12,30 +12,18 @@ Future<void> main() async {
     throw Exception('Error loading .env file: $e');
   }
 
-  final themeManager = AppThemeManager();
-  themeManager.init(AppThemeType.light);
-
-  runApp(MyApp(themeManager: themeManager));
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  final AppThemeManager themeManager;
-  const MyApp({super.key, required this.themeManager});
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedBuilder(
-      animation: themeManager,
-      builder: (context, _) {
-        return MaterialApp.router(
-          debugShowCheckedModeBanner: false,
-          routerConfig: AppRouter.router,
-          theme: ThemeData(
-            useMaterial3: true,
-            primarySwatch: Colors.deepPurple,
-          ),
-        );
-      },
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      routerConfig: AppRouter.router,
+      theme: ThemeData(useMaterial3: true, primarySwatch: Colors.deepPurple),
     );
   }
 }

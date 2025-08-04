@@ -67,7 +67,7 @@ class CounterScreen extends StatelessWidget {
               if (state.counter % 5 == 0) {
                 AppRouter.navigateWithErrorScreen(
                   context: context,
-                  duration: const Duration(seconds: 5),
+                  duration: const Duration(seconds: 1),
                   targetRoute: AppRoutes.counter,
                 );
               }
