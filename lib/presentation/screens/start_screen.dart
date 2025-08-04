@@ -13,31 +13,82 @@ class StartScreen extends StatelessWidget {
     final screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            LottieHandler(assetPath: AnimationRepo.m_welcome_animation),
-            SizedBox(height: 40),
-            SizedBox(
-              height: screenHeight * 0.08,
-              width: screenWidth * 0.55,
-              child: FloatingActionButton(
-                child: Text(
-                  "Get Started",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-                ),
-                onPressed: () {
-                  AppRouter.navigateWithLoadingScreen(
-                    context: context,
-                    duration: const Duration(seconds: 5),
-                    targetRoute: AppRoutes.counter,
-                  );
-                },
-              ),
+      body: Stack(
+        children: [
+          /// Background animation (blob)
+          Positioned.fill(
+            child: LottieHandler(
+              assetPath: AnimationRepo.m_background_blob,
+              fit: BoxFit.cover,
             ),
-          ],
-        ),
+          ),
+
+          /// Interactable bubbles
+          // Positioned(
+          //   top: screenHeight * 0.15,
+          //   left: screenWidth * 0.2,
+          //   child: GestureDetector(
+          //     onTap: () {
+          //       debugPrint("Bubble 1 tapped!");
+          //     },
+          //     child: CircleAvatar(
+          //       radius: 18,
+          //       backgroundColor: Colors.white.withOpacity(0.6),
+          //       child: Icon(Icons.bubble_chart, color: Colors.blueAccent),
+          //     ),
+          //   ),
+          // ),
+          // Positioned(
+          //   bottom: screenHeight * 0.2,
+          //   right: screenWidth * 0.25,
+          //   child: GestureDetector(
+          //     onTap: () {
+          //       debugPrint("Bubble 2 tapped!");
+          //     },
+          //     child: CircleAvatar(
+          //       radius: 14,
+          //       backgroundColor: Colors.white.withOpacity(0.5),
+          //       child: Icon(
+          //         Icons.bubble_chart,
+          //         color: Colors.pinkAccent,
+          //         size: 16,
+          //       ),
+          //     ),
+          //   ),
+          // ),
+
+          /// Central content
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                LottieHandler(assetPath: AnimationRepo.m_welcome_animation),
+                const SizedBox(height: 40),
+                SizedBox(
+                  height: screenHeight * 0.08,
+                  width: screenWidth * 0.55,
+                  child: FloatingActionButton.extended(
+                    backgroundColor: Colors.deepPurpleAccent,
+                    onPressed: () {
+                      AppRouter.navigateWithLoadingScreen(
+                        context: context,
+                        duration: const Duration(seconds: 5),
+                        targetRoute: AppRoutes.counter,
+                      );
+                    },
+                    label: const Text(
+                      "Get Started",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

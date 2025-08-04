@@ -79,6 +79,10 @@ flutter:
       - assets/lottie_animations/bs_error_404.json
       - assets/lottie_animations/bs_sandy_loading.json
       - assets/lottie_animations/bs_just_flow.json
+      - assets/lottie_animations/bs_background_animation.json
+      - assets/lottie_animations/bs_background_blob.json
+      - assets/lottie_animations/bs_blob_animation.json
+      - assets/lottie_animations/bs_liquid_style_background_animation.json
 
   # To add assets to your application, add an assets section, like this:
   # assets:

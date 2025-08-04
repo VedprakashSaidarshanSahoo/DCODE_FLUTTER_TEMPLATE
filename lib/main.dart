@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:my_test_bill_application/config/router/app_router.dart';
+import 'package:my_test_bill_application/core/theme/app_theme_manager.dart';
+import 'package:my_test_bill_application/core/theme/app_theme_type.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -10,18 +12,30 @@ Future<void> main() async {
     throw Exception('Error loading .env file: $e');
   }
 
-  runApp(const MyApp());
+  final themeManager = AppThemeManager();
+  themeManager.init(AppThemeType.light);
+
+  runApp(MyApp(themeManager: themeManager));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final AppThemeManager themeManager;
+  const MyApp({super.key, required this.themeManager});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      debugShowCheckedModeBanner: false,
-      routerConfig: AppRouter.router,
-      theme: ThemeData(useMaterial3: true, primarySwatch: Colors.deepPurple),
+    return AnimatedBuilder(
+      animation: themeManager,
+      builder: (context, _) {
+        return MaterialApp.router(
+          debugShowCheckedModeBanner: false,
+          routerConfig: AppRouter.router,
+          theme: ThemeData(
+            useMaterial3: true,
+            primarySwatch: Colors.deepPurple,
+          ),
+        );
+      },
     );
   }
 }
