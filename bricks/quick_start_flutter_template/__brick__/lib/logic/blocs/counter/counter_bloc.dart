@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:my_test_bill_application/logic/blocs/counter/counter_event.dart';
-import 'package:my_test_bill_application/logic/blocs/counter/counter_state.dart';
+import 'package:{{project_name}}/logic/blocs/counter/counter_event.dart';
+import 'package:{{project_name}}/logic/blocs/counter/counter_state.dart';
 
 class CounterBloc extends Bloc<CounterEvent, CounterState> {
   CounterBloc() : super(CounterInitial(counter: 0)) {

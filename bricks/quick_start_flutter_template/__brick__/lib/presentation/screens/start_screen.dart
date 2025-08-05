@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:my_test_bill_application/config/router/app_router.dart';
-import 'package:my_test_bill_application/config/router/app_routes.dart';
-import 'package:my_test_bill_application/data/repositories/animation_repo/animation_repo.dart';
-import 'package:my_test_bill_application/presentation/animations/lottie_animations.dart';
+import 'package:{{project_name}}/config/router/app_router.dart';
+import 'package:{{project_name}}/config/router/app_routes.dart';
+import 'package:{{project_name}}/data/repositories/animation_repo/animation_repo.dart';
+import 'package:{{project_name}}/presentation/animations/lottie_animations.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen({super.key});

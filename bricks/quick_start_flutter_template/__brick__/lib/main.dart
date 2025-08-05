@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:my_test_bill_application/config/router/app_router.dart';
-import 'package:my_test_bill_application/core/theme/app_theme_manager.dart';
-import 'package:my_test_bill_application/core/theme/app_theme_type.dart';
+import 'package:{{project_name}}/config/router/app_router.dart';
+import 'package:{{project_name}}/core/theme/app_theme_manager.dart';
+import 'package:{{project_name}}/core/theme/app_theme_type.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

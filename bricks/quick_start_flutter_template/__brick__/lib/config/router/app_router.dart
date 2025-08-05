@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:my_test_bill_application/presentation/animations/page_transition_animations.dart';
-import 'package:my_test_bill_application/presentation/screens/counter_screen.dart';
-import 'package:my_test_bill_application/presentation/widgets/error_screen.dart';
-import 'package:my_test_bill_application/presentation/widgets/loading_screen.dart';
-import 'package:my_test_bill_application/presentation/screens/start_screen.dart';
+import 'package:{{project_name}}/presentation/animations/page_transition_animations.dart';
+import 'package:{{project_name}}/presentation/screens/counter_screen.dart';
+import 'package:{{project_name}}/presentation/widgets/error_screen.dart';
+import 'package:{{project_name}}/presentation/widgets/loading_screen.dart';
+import 'package:{{project_name}}/presentation/screens/start_screen.dart';
 
 import 'app_routes.dart';
 

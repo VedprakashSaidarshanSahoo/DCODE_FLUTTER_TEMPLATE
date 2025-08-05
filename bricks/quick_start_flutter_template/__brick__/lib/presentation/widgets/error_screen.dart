@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_test_bill_application/data/repositories/animation_repo/animation_repo.dart';
-import 'package:my_test_bill_application/presentation/animations/lottie_animations.dart';
-import 'package:my_test_bill_application/presentation/widgets/animated_text_error.dart';
+import 'package:{{project_name}}/data/repositories/animation_repo/animation_repo.dart';
+import 'package:{{project_name}}/presentation/animations/lottie_animations.dart';
+import 'package:{{project_name}}/presentation/widgets/animated_text_error.dart';
 
 class ErrorScreen extends StatefulWidget {
   final Duration duration;

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:bloc/bloc.dart';
-import 'package:my_test_bill_application/config/router/app_router.dart';
-import 'package:my_test_bill_application/config/router/app_routes.dart';
-import 'package:my_test_bill_application/logic/blocs/counter/counter_bloc.dart';
-import 'package:my_test_bill_application/logic/blocs/counter/counter_event.dart';
-import 'package:my_test_bill_application/logic/blocs/counter/counter_state.dart';
+import 'package:{{project_name}}/config/router/app_router.dart';
+import 'package:{{project_name}}/config/router/app_routes.dart';
+import 'package:{{project_name}}/logic/blocs/counter/counter_bloc.dart';
+import 'package:{{project_name}}/logic/blocs/counter/counter_event.dart';
+import 'package:{{project_name}}/logic/blocs/counter/counter_state.dart';
 
 class CounterScreen extends StatelessWidget {
   const CounterScreen({super.key});
